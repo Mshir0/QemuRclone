@@ -1,12 +1,12 @@
 # Buildroot ARM64 with Rclone for QEMU
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-一个预配置好的ARM64 Linux系统，包含rclone云存储客户端，可在QEMU虚拟机中运行。谷歌云盘连接[![Google Drive](https://drive.google.com/file/d/1WZstW354Ikp4FgbJBsSXc5CZPDNwh3kN/view?usp=drive_link)
+一个预配置好的ARM64 Linux系统，包含rclone云存储客户端，可在QEMU虚拟机中运行。谷歌云盘连接[Google Drive](https://drive.google.com/file/d/1WZstW354Ikp4FgbJBsSXc5CZPDNwh3kN/view?usp=drive_link)
 
 ## 使用方法
 
 - 安装qemu和buildroot
-  '''
+  ```
   #qemu
   #Additional information can also be found online via the QEMU website [WIKI](https://wiki.qemu.org/Hosts/Linux)
   git clone https://gitlab.com/qemu-project/qemu.git
@@ -22,9 +22,9 @@
   make qemu_aarch64_virt_defconfig #设置arm64的系统
 
   make #编译整个系统
-  '''
+  ```
 - qemu中添加rclone包
-  '''
+  ```
   cd ~/buildroot/package #使用qemu的包管理器
   vim Config.in
   #在Config.in中添加source "package/rclone/Config.in"
@@ -37,10 +37,10 @@
   make rclone
   make qemu
   make #完成rclone在arm64系统中的安装 
-  '''
+  ```
 
 ## 📸 qemu中rclone结果
-'''
+```
 Booting Linux on physical CPU 0x0000000000 [0x410fd034]
 Linux version 6.12.47 (esp@DESKTOP-ILRNJJ3) (aarch64-buildroot-linux-gnu-gcc.br_real (Buildroot 2025.11-875-g898677d8b3-dirty) 14.3.0, GNU ld (GNU Binutils) 2.44) #1 SMP Wed Jan  7 19:52:29 CST 2026
 random: crng init done
@@ -251,5 +251,5 @@ Available Commands:
 Use "rclone [command] --help" for more information about a command.
 Use "rclone help flags" for to see the global flags.
 Use "rclone help backends" for a list of supported services.
-'''
+```
 
