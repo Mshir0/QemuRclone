@@ -41,6 +41,18 @@
 
 ## 📸 qemu中rclone结果
 ```
+# rclone --version
+rclone v1.66.0
+- os/version: buildroot 2025.11-875-g898677d8b3-dirty (64 bit)
+- os/kernel: 6.12.47 (aarch64)
+- os/type: linux
+- os/arch: arm64 (ARMv8 compatible)
+- go/version: go1.22.1
+- go/linking: static
+- go/tags: none
+```
+## 
+```
 Booting Linux on physical CPU 0x0000000000 [0x410fd034]
 Linux version 6.12.47 (esp@DESKTOP-ILRNJJ3) (aarch64-buildroot-linux-gnu-gcc.br_real (Buildroot 2025.11-875-g898677d8b3-dirty) 14.3.0, GNU ld (GNU Binutils) 2.44) #1 SMP Wed Jan  7 19:52:29 CST 2026
 random: crng init done
