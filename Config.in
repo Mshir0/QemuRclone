@@ -1,0 +1,6 @@
+config BR2_PACKAGE_RCLONE
+	bool "rclone"
+	help
+	  Command line program to sync files and directories to and from various cloud storage services.
+	  
+	  https://rclone.org/
